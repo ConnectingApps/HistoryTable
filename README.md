@@ -21,7 +21,7 @@ You do not need to install sql server yourself. Docker compose files describe al
 Here is how you can get started
 
 ```bash
-$ git clone https://github.com/ConnectingApps/HistoryTable.git
+git clone https://github.com/ConnectingApps/HistoryTable.git
 cd HistoryTable
 docker-compose build
 docker-compose up
