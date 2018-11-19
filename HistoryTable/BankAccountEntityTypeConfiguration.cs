@@ -1,9 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace HistoryTable
 {
@@ -16,7 +12,7 @@ namespace HistoryTable
             builder.HasKey(ci => ci.Id);
 
             builder.Property(ci => ci.Id)
-               .IsRequired();
+                .IsRequired();
         }
     }
 }
