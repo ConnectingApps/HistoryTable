@@ -9,24 +9,22 @@ namespace HistoryTable.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "BankAccounts",
-                columns: table => new
+                "BankAccounts",
+                table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Euros = table.Column<int>(nullable: false)
+                    Id = table.Column<int>()
+                        .Annotation("SqlServer:ValueGenerationStrategy",
+                            SqlServerValueGenerationStrategy.IdentityColumn),
+                    Euros = table.Column<int>()
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_BankAccounts", x => x.Id);
-                });
+                constraints: table => { table.PrimaryKey("PK_BankAccounts", x => x.Id); });
             migrationBuilder.AddTemporalTableSupport("BankAccounts");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "BankAccounts");
+                "BankAccounts");
         }
     }
 }
